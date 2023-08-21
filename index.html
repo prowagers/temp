@@ -59,5 +59,13 @@
     </footer>
 </body>
 
+<script>
+    if (document.getElementById("ftyear") != null){
+        window.addEventListener("load", async function (){ 
+            document.getElementById("ftyear").innerText = new Date().getFullYear()
+        }
+    )}
+</script>
+
 <script src="https://kit.fontawesome.com/e103c5acd0.js" crossorigin="anonymous"></script>
 </html>
