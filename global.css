@@ -1,0 +1,230 @@
+/*  */
+/* Global Rules and colors */
+/*  */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {
+    --bg: #222831;
+    --bg2: #393E46;
+    --ac: #00ADB5;
+    --text: #EEEEEE;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+
+.content {
+    height: 90vh;
+}
+
+.main {
+    position: absolute;
+    top: 40%;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.main a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--ac);
+    width: 50%;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 5%;
+}
+
+body a {
+    color: var(--ac);
+}
+
+/*  */
+/* Header */
+/*  */
+
+header {
+    background-color: var(--bg2);
+    border-bottom: var(--ac) solid .2rem;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hdtitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Carter One', cursive;
+    text-decoration: none;
+}
+
+.hdopt {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.hdlead {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.hdlead{
+    display: inline-flex;
+    min-width: 15rem;
+    border-right: var(--ac) .15rem solid;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-size: 1.6rem;
+}
+
+.hdlead i {
+    margin-right: .5rem;
+}
+
+.hdopt i {
+    margin-right: .5rem;
+}
+
+.hdopt div, .hdopt a {
+    display: inline-flex;
+    min-width: 9rem;
+    border-left: var(--ac) .075rem solid;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-size: 1.6rem;
+}
+
+.hdbalance {
+
+}
+
+.hdopt *, #drp *, .hdlead{
+    transition: .3s all;
+}
+
+.hdopt *:hover, #drp *:hover, .hdlead:hover {
+    color: var(--ac)
+}
+
+#drp {
+    display: none;
+    position: absolute;
+    border-top: var(--ac) .15rem solid;
+    margin-left: .1rem;
+}
+
+#drp * {
+    display: flex;
+    width: 10rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    text-decoration: none;
+    background-color: var(--bg2);
+    border: var(--ac) .15rem solid;
+    border-top: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.hdlogout, .hdlead, .hdprof{
+    color: var(--text);
+    text-decoration: none;
+}
+
+
+/*  */
+/* Footer */
+/*  */
+
+footer {
+    border-top: var(--ac) solid .2rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ftlist {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ftextra {
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.ftextra img {
+    width: 5rem;
+}
+
+.ftcopyright {
+    opacity: .6;
+}
+
+.fttitle {
+    font-weight: 500;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: .4rem;
+    padding-bottom: .3rem;
+    border-bottom: var(--text) .1rem solid;
+    text-align: center;
+}
+
+.ftlist a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+    position: relative;
+}
+
+.ftlist a {
+    position: relative;
+}
+
+.ftlist a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: var(--ac);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+  
+.ftlist a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
